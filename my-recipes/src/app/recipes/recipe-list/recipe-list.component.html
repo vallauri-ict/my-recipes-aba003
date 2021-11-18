@@ -7,6 +7,17 @@
 <div class="row">
 
     <div class="col-xs-12">
-        <app-recipe-item></app-recipe-item>
+        <!-- <app-recipe-item></app-recipe-item> -->
+        <a *ngFor="let recipe of recipes" href="#" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+                <p class="list-group-item-test">
+                    {{recipe.description}}
+                </p>
+            </div>
+            <span class="pull-right">
+                <img style="height: 100px;" class="img-responsive" [src]="recipe.imagePath" alt="">
+            </span>
+        </a>
     </div>
 </div>
