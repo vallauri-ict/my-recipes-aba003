@@ -7,35 +7,36 @@ import { RecipeModel } from 'src/app/models/recipe.models';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  recipes:RecipeModel[]=[
+    new RecipeModel(
+      'Spaghetti alla chitarra',
+      'Un particolare tipo di pasta che ...',
+      'https://images.lacucinaitaliana.it/wp-content/uploads/2020/06/03204258/Pasta-alla-chitarra-con-ragu-di-polo.jpg'
+    ),
 
-  recipes:RecipeModel[] = [
     new RecipeModel(
-      "Spaghetti alla chitarra",
-      "Un particolare tipo di preparazione della pasta",
-      "https://www.buttalapasta.it/wp-content/uploads/spaghetti-alla-chitarra-2-1200x898.jpg"
+      'Lasagne alla bolognese',
+      'Pasta emiliana molto calorica sempre presente nei pranzi domenicali ...',
+      'https://www.tribugolosa.com/uploads/media/lasagne-alla-bolognese-hem1.jpg?1389133420'
     ),
+
     new RecipeModel(
-      "Lasagne",
-      "Tipico primo piatto emiliano, secondo piatto italiano più esportato al mondo",
-      "https://media-assets.vanityfair.it/photos/614da3dd3120b0fb33ef79e7/3:2/w_1188,h_792,c_limit/Portrait-Lasagna.jpg"
+      'Ravioles al Formaggio',
+      'Ottimi soprattutto in Val Varaita nell variante Ravioles...',
+      'https://media-cdn.tripadvisor.com/media/photo-s/14/b1/37/d3/ravioles-della-valle.jpg'
     ),
+
     new RecipeModel(
-      "Gnocchi alla bava",
-      "Primo piatto preparato con formaggi misti, tipico della cucina padana e in particolare del piemonte",
-      "https://blog.giallozafferano.it/cuochinprogress/wp-content/uploads/2020/09/gnocchi-alla-bava-def1a.jpg"
-    ),
-    new RecipeModel(
-      "Bonet",
-      "Tipico dolce piemontese preparata con amaretti e caramello",
-      "https://www.giallozafferano.it/images/2-220/Bonet_450x300.jpg"
+      'Tiramisù',
+      'Classico dolce italiano con mascarpone ...',
+      'https://toscanedigusto.com/wp-content/uploads/2019/09/maxresdefault.jpg'
     )
-  ];
-  selectedRecipe: RecipeModel;
+  ]
 
-  constructor() { 
-
-    this.selectedRecipe=this.recipes[0];
-  }
+  selectedRecipe:RecipeModel
+  constructor() {
+    this.selectedRecipe=this.recipes[0]
+   }
 
   ngOnInit(): void {
   }
